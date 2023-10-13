@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-image: linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%);
+
+}
+
+.heading {
+  margin: -100px 0 60px 0;
+}
+
+.status {
+ font-size: 1.5rem;
+ font-weight: 500;
+ letter-spacing: 2px;
+ margin-bottom: 2rem;
+ color: #c8d1f6;
+}
+
+#game-board {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#restart-button {
+margin-top: 2rem;
+font-size: 2rem;
+background-color: transparent;
+border: none;
+color: #c8d1f6;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  border: 1px solid grey;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 15px solid #5272F2; /* Set the border to transparent */
+  box-sizing: border-box; 
+}
+
+.cross{
+  height: 80px;
+  width: 80px;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.cross::before, .cross::after {
+  content: "";
+  position: absolute;
+  background-color: #EB455F;
+}
+
+.cross::before {
+  left: 57%;
+  width: 15%;
+  margin-left: -15%;
+  height: 100%;
+}
+
+.cross::after {
+  top: 57%;
+  height: 15%;
+  margin-top: -15%;
+  width: 100%;
+}
